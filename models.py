@@ -6,7 +6,31 @@ import torch.nn.functional as F
 from tqdm import tqdm 
 
 # Define your custom Model    
-class yourModelName(nn.Module):
+class MNISTClassifier(nn.Module):
+    # To properly utilize the config file, the output_size variable must be used in __init__().
+    def __init__(self, output_size):
+        super(MNISTClassifier, self).__init__()
+        # Convolutional layers
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=5, stride=1, padding=2)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=5, stride=1, padding=2)
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+
+        # Fully connected layers
+        self.fc1 = nn.Linear(64 * 7 * 7, 1000)  # Image size is 28x28, reduced to 14x14 and then to 7x7
+        self.fc2 = nn.Linear(1000, output_size)  # 10 output classes (digits 0-9)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        x = self.pool(x)
+        x = F.relu(self.conv2(x))
+        x = self.pool(x)
+
+        # Flatten the output for the fully connected layers
+        x = x.view(-1, 64 * 7 * 7)
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+
+        return x
     
 
 # Set the torch train & test
