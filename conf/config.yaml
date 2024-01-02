@@ -9,7 +9,7 @@ model:
   output_size: 10 # Input your model's output size (only classification)
 
 dataset:
-    name: 'MNIST' # Input your data name
+    name: 'MNIST' # Input your data name 
     validation_split: 0.2 # Ratio of dividing train data by validation
 
 # client
