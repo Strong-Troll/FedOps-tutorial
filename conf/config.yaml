@@ -13,7 +13,7 @@ dataset:
     validation_split: 0.2 # Ratio of dividing train data by validation
 
 # client
-task_id: 'testflower' # Input your Task Name that you register in FedOps Website
+task_id: 'zzzzzz' # Input your Task Name that you register in FedOps Website
 
 wandb: 
   use: false # Whether to use wandb
@@ -23,9 +23,9 @@ wandb:
 
 
 # server
-num_epochs: 1 # number of local epochs
+num_epochs: 3 # number of local epochs
 batch_size: 128
-num_rounds: 2 # Number of rounds to perform
+num_rounds: 5 # Number of rounds to perform
 clients_per_round: 1 # Number of clients participating in the round
 
 server:
