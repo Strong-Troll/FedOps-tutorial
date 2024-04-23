@@ -7,22 +7,31 @@ from tqdm import tqdm
 import numpy as np
 
 # Define MNIST Model in TensorFlow
-def build_mnist_model(output_size):
-    inputs = Input(shape=(28, 28, 1))
-    x = Conv2D(32, kernel_size=5, padding='same', activation='relu')(inputs)
-    x = MaxPooling2D(pool_size=2)(x)
-    x = Conv2D(64, kernel_size=5, padding='same', activation='relu')(x)
-    x = MaxPooling2D(pool_size=2)(x)
-    x = Flatten()(x)
-    x = Dense(1000, activation='relu')(x)
-    outputs = Dense(output_size, activation='softmax')(x)
+class MNISTClassifier(tf.keras.Model):
+    def __init__(self, output_size):
+        super(MNISTClassifier, self).__init__()
+        # Define the layers of the model
+        self.conv1 = Conv2D(32, kernel_size=5, padding='same', activation='relu')
+        self.pool1 = MaxPooling2D(pool_size=2)
+        self.conv2 = Conv2D(64, kernel_size=5, padding='same', activation='relu')
+        self.pool2 = MaxPooling2D(pool_size=2)
+        self.flatten = Flatten()
+        self.dense1 = Dense(1000, activation='relu')
+        self.outputs = Dense(output_size, activation='softmax')
 
-    model = Model(inputs=inputs, outputs=outputs)
-    return model
+    def call(self, inputs):
+        x = self.conv1(inputs)
+        x = self.pool1(x)
+        x = self.conv2(x)
+        x = self.pool2(x)
+        x = self.flatten(x)
+        x = self.dense1(x)
+        x = self.outputs(x)
+        return x
 
 # Training function
 def train_tf():
-    def custom_train_tf(model, train_dataset, epochs, learning_rate):
+    def custom_train_tf(model, train_dataset, epochs, cfg):
         print("Starting training...")
         optimizer = Adam(learning_rate=cfg.learning_rate)
         model.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=['accuracy'])

@@ -24,7 +24,8 @@ def main(cfg: DictConfig) -> None:
     x_train, x_test, x_val, y_train, y_test, y_val= tensorflow_data_preparation.load_partition_tf(dataset=cfg.dataset.name, 
                                                                         validation_split=cfg.dataset.validation_split, 
                                                                         batch_size=cfg.batch_size) 
-    
+    if not model.built:
+        model.build((None, 28, 28, 1))  # Build the model if not already built
     # Start fl server
     fl_server = FLServer(cfg=cfg, model=model, model_name=model_name, model_type=model_type,
                          x_val = x_val, y_val = y_val) # torch

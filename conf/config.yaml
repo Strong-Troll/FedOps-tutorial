@@ -5,7 +5,7 @@ learning_rate: 0.001 # Input model's learning rate
 
 model_type: 'Tensorflow' # This value should be maintained
 model:
-  _target_: models.MNISTClassifier # Input your custom model
+  _target_: tensorflow_model.MNISTClassifier # Input your custom model
   output_size: 10 # Input your model's output size (only classification)
 
 dataset:
@@ -13,7 +13,7 @@ dataset:
     validation_split: 0.2 # Ratio of dividing train data by validation
 
 # client
-task_id: 'tutorial' # Input your Task Name that you register in FedOps Website
+task_id: 'samd' # Input your Task Name that you register in FedOps Website
 
 wandb: 
   use: false # Whether to use wandb
