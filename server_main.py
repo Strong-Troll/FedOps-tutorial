@@ -2,8 +2,8 @@ import hydra
 from omegaconf import DictConfig
 
 from fedops.server.app import FLServer
-import models
-import data_preparation
+import tensorflow_model
+import tensorflow_data_preparation
 from hydra.utils import instantiate
 
 
@@ -18,14 +18,16 @@ def main(cfg: DictConfig) -> None:
     model = instantiate(cfg.model)
     model_type = cfg.model_type # Check tensorflow or torch model
     model_name = type(model).__name__
-    gl_test_torch = models.test_torch() # set torch test    
+    gl_test_torch = tensorflow_model.test_tf() # set torch test    
     
     # Load validation data for evaluating global model
-    gl_val_loader = data_preparation.gl_model_torch_validation(batch_size=cfg.batch_size) # torch
+    x_train, x_test, x_val, y_train, y_test, y_val= tensorflow_data_preparation.load_partition_tf(dataset=cfg.dataset.name, 
+                                                                        validation_split=cfg.dataset.validation_split, 
+                                                                        batch_size=cfg.batch_size) 
     
     # Start fl server
     fl_server = FLServer(cfg=cfg, model=model, model_name=model_name, model_type=model_type,
-                         gl_val_loader=gl_val_loader, test_torch=gl_test_torch) # torch
+                         x_val = x_val, y_val = y_val) # torch
     fl_server.start()
     
 

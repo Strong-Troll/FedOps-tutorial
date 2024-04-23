@@ -3,8 +3,8 @@ import hydra
 from hydra.utils import instantiate
 import numpy as np
 import torch
-import data_preparation
-import models
+import tensorflow_data_preparation
+import tensorflow_model
 
 from fedops.client import client_utils
 from fedops.client.app import FLClientTask
@@ -33,7 +33,7 @@ def main(cfg: DictConfig) -> None:
     Client data load function
     After setting model method in data_preparation.py, call the model method.
     """
-    train_loader, val_loader, test_loader= data_preparation.load_partition(dataset=cfg.dataset.name, 
+    x_train, x_test, x_val, y_train, y_test, y_val= tensorflow_data_preparation.load_partition_tf(dataset=cfg.dataset.name, 
                                                                         validation_split=cfg.dataset.validation_split, 
                                                                         batch_size=cfg.batch_size) 
     
@@ -48,8 +48,8 @@ def main(cfg: DictConfig) -> None:
     model = instantiate(cfg.model)
     model_type = cfg.model_type     # Check tensorflow or torch model
     model_name = type(model).__name__
-    train_torch = models.train_torch() # set torch train
-    test_torch = models.test_torch() # set torch test
+    train_torch = tensorflow_model.train_tf() # set torch train
+    test_torch = tensorflow_model.test_tf() # set torch test
 
     # Local model directory for saving local models
     task_id = cfg.task_id  # FL task ID
@@ -63,9 +63,10 @@ def main(cfg: DictConfig) -> None:
     
     # Don't change "registration"
     registration = {
-        "train_loader" : train_loader,
-        "val_loader" : val_loader,
-        "test_loader" : test_loader,
+        "x_train" : x_train,
+        "x_test" : x_test,
+        "y_train" : y_train,
+        "y_test" : y_test,
         "model" : model,
         "model_name" : model_name,
         "train_torch" : train_torch,
@@ -80,4 +81,3 @@ def main(cfg: DictConfig) -> None:
 if __name__ == "__main__":
     main()
     
-
