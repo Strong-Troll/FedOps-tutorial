@@ -24,7 +24,7 @@ def main(cfg: DictConfig) -> None:
     x_train, x_test, x_val, y_train, y_test, y_val= tensorflow_data_preparation.load_partition_tf(dataset=cfg.dataset.name, 
                                                                         validation_split=cfg.dataset.validation_split, 
                                                                         batch_size=cfg.batch_size) 
-    odel.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
     if not model.built:
         model.build((None, 28, 28, 1))  # Build the model if not already built
     # Start fl server
