@@ -50,8 +50,8 @@ def main(cfg: DictConfig) -> None:
     Set the initial global model you created in models.py.
     """
     # Instantiate the model as per configuration
-    model = instantiate(cfg.model)
-    print("////////////////////////////////////////////////////////////////////////", model)
+    model = tensorflow_model.MNISTClassifier()
+    print("////////////////////////////////////////////////////////////////////////", model.get_weights())
     model_type = cfg.model_type  # Determine if the model is TensorFlow or Torch
 
     # Correct function based on model_type
@@ -60,7 +60,7 @@ def main(cfg: DictConfig) -> None:
         # Compile the TensorFlow model
         model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
         # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
-        # model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
+        model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
 
     # Load validation data for evaluating the global model
     x_train, x_test, x_val, y_train, y_test, y_val = tensorflow_data_preparation.load_partition_tf(
@@ -68,6 +68,7 @@ def main(cfg: DictConfig) -> None:
         validation_split=cfg.dataset.validation_split,
         batch_size=cfg.batch_size)
 
+    print("////////////////////////////////////////////////////////////////////////", model.get_weights())
     # Initialize FL server with the appropriate model and data
     fl_server = FLServer(cfg=cfg, model=model, model_name=model.__class__.__name__, model_type=model_type,
                          x_val=x_val, y_val=y_val)

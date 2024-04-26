@@ -8,7 +8,7 @@ import numpy as np
 
 # Define MNIST Model in TensorFlow
 class MNISTClassifier(tf.keras.Model):
-    def __init__(self, output_size):
+    def __init__(self, output_size = 10):
         super(MNISTClassifier, self).__init__()
         # Define the layers of the model
         self.conv1 = Conv2D(32, kernel_size=5, padding='same', activation='relu')
