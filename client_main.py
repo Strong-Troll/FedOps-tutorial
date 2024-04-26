@@ -69,8 +69,8 @@ def main(cfg: DictConfig) -> None:
         "y_test" : y_test,
         "model" : model,
         "model_name" : model_name,
-        "train_torch" : train_torch,
-        "test_torch" : test_torch
+        # "train_torch" : train_torch,
+        # "test_torch" : test_torch
     }
     
     
