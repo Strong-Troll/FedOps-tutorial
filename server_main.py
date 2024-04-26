@@ -51,11 +51,12 @@ def main(cfg: DictConfig) -> None:
     """
     # Instantiate the model as per configuration
     model = instantiate(cfg.model)
+    print("////////////////////////////////////////////////////////////////////////", model)
     model_type = cfg.model_type  # Determine if the model is TensorFlow or Torch
 
     # Correct function based on model_type
     if model_type == 'Tensorflow':
-        test_function = tensorflow_model.test_tf  # Adjusted for TensorFlow testing function
+        # test_function = tensorflow_model.test_tf  # Adjusted for TensorFlow testing function
         # Compile the TensorFlow model
         model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
         # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
