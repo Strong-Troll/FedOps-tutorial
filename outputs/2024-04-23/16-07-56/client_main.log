@@ -1,0 +1,12 @@
+[2024-04-23 16:07:56,866][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-04-23 16:07:56"}
+[2024-04-23 16:08:00,353][__main__][INFO] - data loaded
+[2024-04-23 16:08:00,373][root][INFO] - init model_type: Tensorflow
+[2024-04-23 16:08:00,390][uvicorn.error][INFO] - Started server process [570457]
+[2024-04-23 16:08:00,391][uvicorn.error][INFO] - Waiting for application startup.
+[2024-04-23 16:08:00,391][uvicorn.error][INFO] - Application startup complete.
+[2024-04-23 16:08:00,391][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+[2024-04-23 16:19:35,161][uvicorn.error][INFO] - Shutting down
+[2024-04-23 16:19:35,262][uvicorn.error][INFO] - Waiting for application shutdown.
+[2024-04-23 16:19:35,263][uvicorn.error][INFO] - Application shutdown complete.
+[2024-04-23 16:19:35,263][uvicorn.error][INFO] - Finished server process [570457]
+[2024-04-23 16:19:35,281][root][INFO] - ccl-e-server;8b:49:9d:e8:b9:10-client close

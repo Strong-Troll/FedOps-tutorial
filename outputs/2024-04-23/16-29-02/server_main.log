@@ -1,0 +1,7 @@
+[2024-04-23 16:29:03,157][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-04-23 16:29:03"}
+[2024-04-23 16:29:11,803][root][ERROR] - No read global model
+[2024-04-23 16:29:11,803][root][INFO] - gl_model: None, gl_model_v: 0
+[2024-04-23 16:29:11,827][root][INFO] - last_gl_model_v: 0
+[2024-04-23 16:29:11,827][root][INFO] - init global model making
+[2024-04-23 16:29:11,843][root][INFO] - server close
+[2024-04-23 16:29:11,853][root][INFO] - global model version upgrade

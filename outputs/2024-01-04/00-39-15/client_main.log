@@ -1,0 +1,14 @@
+[2024-01-04 00:39:15,547][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-01-04 00:39:15"}
+[2024-01-04 00:39:15,638][__main__][INFO] - data loaded
+[2024-01-04 00:39:15,668][__main__][INFO] - Latest Local Model download
+[2024-01-04 00:39:15,668][root][INFO] - downloaded local_model_name: MNISTClassifier_local_model_V2.pth
+[2024-01-04 00:39:15,681][root][INFO] - init model_type: Pytorch
+[2024-01-04 00:39:15,699][uvicorn.error][INFO] - Started server process [927363]
+[2024-01-04 00:39:15,699][uvicorn.error][INFO] - Waiting for application startup.
+[2024-01-04 00:39:15,699][uvicorn.error][INFO] - Application startup complete.
+[2024-01-04 00:39:15,699][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+[2024-01-04 00:39:59,310][uvicorn.error][INFO] - Shutting down
+[2024-01-04 00:39:59,411][uvicorn.error][INFO] - Waiting for application shutdown.
+[2024-01-04 00:39:59,412][uvicorn.error][INFO] - Application shutdown complete.
+[2024-01-04 00:39:59,412][uvicorn.error][INFO] - Finished server process [927363]
+[2024-01-04 00:39:59,439][root][INFO] - ccl-e-server;19:e7:c0:91:ab:e3-client close

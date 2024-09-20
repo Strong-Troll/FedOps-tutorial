@@ -1,0 +1,46 @@
+[2024-06-19 13:38:21,429][root][INFO] - FL_Task - {"dataset": "mnist", "start_execution_time": "2024-06-19 13:38:21"}
+[2024-06-19 13:38:21,519][__main__][INFO] - data loaded
+[2024-06-19 13:38:21,550][root][INFO] - init model_type: Pytorch
+[2024-06-19 13:38:21,566][uvicorn.error][INFO] - Started server process [1698743]
+[2024-06-19 13:38:21,567][uvicorn.error][INFO] - Waiting for application startup.
+[2024-06-19 13:38:21,567][uvicorn.error][INFO] - Application startup complete.
+[2024-06-19 13:38:21,567][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+[2024-06-19 13:38:37,652][root][INFO] - bulid model
+[2024-06-19 13:38:37,652][root][INFO] - FL start
+[2024-06-19 13:38:37,665][uvicorn.error][ERROR] - Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/uvicorn/protocols/http/httptools_impl.py", line 376, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/fastapi/applications.py", line 208, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/fastapi/routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/fastapi/routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/fedops/client/app.py", line 188, in client_start_trigger
+    self.status.server_IP = client_api.ClientServerAPI(self.task_id).get_port()
+  File "/home/ccl/anaconda3/envs/FedOps/lib/python3.9/site-packages/fedops/client/client_api.py", line 57, in get_port
+    FL_server_IP = f"{self.ccl_address}:{response.json()['port']}"
+KeyError: 'port'
+[2024-06-19 13:41:41,571][uvicorn.error][INFO] - Shutting down
+[2024-06-19 13:41:41,672][uvicorn.error][INFO] - Waiting for application shutdown.
+[2024-06-19 13:41:41,673][uvicorn.error][INFO] - Application shutdown complete.
+[2024-06-19 13:41:41,673][uvicorn.error][INFO] - Finished server process [1698743]

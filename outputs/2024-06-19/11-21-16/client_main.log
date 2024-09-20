@@ -1,0 +1,6 @@
+[2024-06-19 11:21:16,840][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-06-19 11:21:16"}
+[2024-06-19 11:21:17,811][__main__][INFO] - data loaded
+[2024-06-19 11:21:17,828][root][INFO] - init model_type: Tensorflow
+[2024-06-19 11:21:20,966][root][INFO] - bulid model
+[2024-06-19 11:21:20,967][root][INFO] - FL start
+[2024-06-19 11:21:41,660][root][INFO] - ccl-e-server;8b:49:9d:e8:b9:10-client close

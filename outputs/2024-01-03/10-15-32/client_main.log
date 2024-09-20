@@ -1,0 +1,36 @@
+[2024-01-03 10:15:32,475][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-01-03 10:15:32"}
+[2024-01-03 10:15:32,567][__main__][INFO] - data loaded
+[2024-01-03 10:15:32,593][root][INFO] - init model_type: Pytorch
+[2024-01-03 10:15:32,610][uvicorn.error][INFO] - Started server process [489190]
+[2024-01-03 10:15:32,610][uvicorn.error][INFO] - Waiting for application startup.
+[2024-01-03 10:15:32,610][uvicorn.error][INFO] - Application startup complete.
+[2024-01-03 10:15:32,611][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+[2024-01-03 10:17:58,755][root][INFO] - bulid model
+[2024-01-03 10:17:58,755][root][INFO] - FL start
+[2024-01-03 10:17:58,768][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40022
+[2024-01-03 10:17:58,769][root][INFO] - FL learning ready
+[2024-01-03 10:17:58,769][root][INFO] - fl_task_id: rehearsal
+[2024-01-03 10:17:58,769][root][INFO] - dataset: MNIST
+[2024-01-03 10:17:58,769][root][INFO] - output_size: 10
+[2024-01-03 10:17:58,770][root][INFO] - validation_split: 0.2
+[2024-01-03 10:17:58,770][root][INFO] - model_type: Pytorch
+[2024-01-03 10:17:58,808][flwr][INFO] - Opened insecure gRPC connection (no certificates were passed)
+[2024-01-03 10:17:58,811][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-01-03 10:17:58,811][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-01-03 10:17:58,817][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-01-03 10:18:16,539][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "rehearsal", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 1, "gl_model_v": 1, "train_loss": 0.05574131485880584, "train_accuracy": 0.983, "train_f1_score": 0.9830304000593947, "val_loss": 0.06084722615382139, "val_accuracy": 0.9799166666666667, "val_f1_score": 0.9799340520649712, "train_time": 17.46925115585327, "wandb_name": ""}
+[2024-01-03 10:18:22,020][fedops.client.client_fl][INFO] - test - {"fl_task_id": "rehearsal", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 1, "test_loss": 0.06322759563261841, "test_accuracy": 0.981, "gl_model_v": 1, "wandb_name": ""}
+[2024-01-03 10:18:36,058][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "rehearsal", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 2, "gl_model_v": 1, "train_loss": 0.02855277264322293, "train_accuracy": 0.9911388888888889, "train_f1_score": 0.9911381837703294, "val_loss": 0.04460063334455357, "val_accuracy": 0.9865833333333334, "val_f1_score": 0.9865701612054631, "train_time": 13.812262058258057, "wandb_name": ""}
+[2024-01-03 10:18:41,086][fedops.client.client_fl][INFO] - test - {"fl_task_id": "rehearsal", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 2, "test_loss": 0.050373765808391445, "test_accuracy": 0.9853333333333333, "gl_model_v": 1, "wandb_name": ""}
+[2024-01-03 10:18:41,124][flwr][DEBUG] - gRPC channel closed
+[2024-01-03 10:18:41,125][flwr][INFO] - Disconnect and shut down
+[2024-01-03 10:18:41,126][root][INFO] - fl learning finished
+[2024-01-03 10:18:41,128][root][INFO] - client_operation_time - {"fl_task_id": "rehearsal", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "operation_time": 42.358399391174316, "gl_model_v": 1}
+[2024-01-03 10:18:41,205][root][INFO] - try notify_fin
+[2024-01-03 10:18:41,234][root][INFO] - trainFin
+[2024-01-03 10:18:41,235][root][INFO] - FL Client Learning Finish
+[2024-01-03 10:38:09,097][uvicorn.error][INFO] - Shutting down
+[2024-01-03 10:38:09,198][uvicorn.error][INFO] - Waiting for application shutdown.
+[2024-01-03 10:38:09,199][uvicorn.error][INFO] - Application shutdown complete.
+[2024-01-03 10:38:09,199][uvicorn.error][INFO] - Finished server process [489190]
+[2024-01-03 10:38:09,217][root][INFO] - ccl-e-server;19:e7:c0:91:ab:e3-client close

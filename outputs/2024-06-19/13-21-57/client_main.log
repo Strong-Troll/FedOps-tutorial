@@ -1,0 +1,30 @@
+[2024-06-19 13:21:57,324][root][INFO] - FL_Task - {"dataset": "mnist", "start_execution_time": "2024-06-19 13:21:57"}
+[2024-06-19 13:21:57,425][__main__][INFO] - data loaded
+[2024-06-19 13:21:57,452][root][INFO] - init model_type: Pytorch
+[2024-06-19 13:25:26,179][root][INFO] - bulid model
+[2024-06-19 13:25:26,179][root][INFO] - FL start
+[2024-06-19 13:25:26,191][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40021
+[2024-06-19 13:25:26,193][root][INFO] - FL learning ready
+[2024-06-19 13:25:26,193][root][INFO] - fl_task_id: samd
+[2024-06-19 13:25:26,193][root][INFO] - dataset: mnist
+[2024-06-19 13:25:26,194][root][INFO] - output_size: 10
+[2024-06-19 13:25:26,194][root][INFO] - validation_split: 0.2
+[2024-06-19 13:25:26,194][root][INFO] - model_type: Pytorch
+[2024-06-19 13:25:26,195][flwr][WARNING] - 
+        DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+        This is a deprecated feature. It will be removed
+        entirely in future versions of Flower.
+        
+[2024-06-19 13:25:26,231][flwr][INFO] - Opened insecure gRPC connection (no certificates were passed)
+[2024-06-19 13:25:26,233][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-19 13:25:26,234][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-06-19 13:25:26,257][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-06-19 13:37:25,434][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-19 13:37:25,637][flwr][DEBUG] - gRPC channel closed

@@ -1,0 +1,3 @@
+[2024-06-19 13:20:15,666][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-06-19 13:20:15"}
+[2024-06-19 13:20:16,878][__main__][INFO] - data loaded
+[2024-06-19 13:20:16,905][root][INFO] - init model_type: Pytorch

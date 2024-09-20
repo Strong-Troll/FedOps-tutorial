@@ -1,0 +1,15 @@
+[2024-04-26 13:08:48,572][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-04-26 13:08:48"}
+[2024-04-26 13:08:51,576][root][ERROR] - No read global model
+[2024-04-26 13:08:51,576][root][INFO] - gl_model: None, gl_model_v: 0
+[2024-04-26 13:08:51,584][root][INFO] - last_gl_model_v: 0
+[2024-04-26 13:08:51,585][root][INFO] - init global model making
+[2024-04-26 13:08:51,639][flwr][INFO] - Starting Flower server, config: ServerConfig(num_rounds=3, round_timeout=None)
+[2024-04-26 13:08:51,680][flwr][INFO] - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+[2024-04-26 13:08:51,680][flwr][INFO] - Initializing global parameters
+[2024-04-26 13:08:51,681][flwr][INFO] - Using initial parameters provided by strategy
+[2024-04-26 13:08:51,681][flwr][INFO] - Evaluating initial parameters
+[2024-04-26 13:08:55,380][tensorflow][INFO] - Assets written to: ./MNISTClassifier_gl_model_V1.tf/assets
+[2024-04-26 13:08:55,400][flwr][INFO] - initial parameters (loss, other metrics): 2.2995448112487793, {'accuracy': 0.17675000429153442}
+[2024-04-26 13:08:55,401][flwr][INFO] - FL starting
+[2024-04-26 13:08:55,401][root][INFO] - server start by round
+[2024-04-26 13:46:27,179][root][INFO] - server close

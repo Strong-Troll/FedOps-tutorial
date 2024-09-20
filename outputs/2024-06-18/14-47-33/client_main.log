@@ -1,0 +1,7 @@
+[2024-06-18 14:47:33,428][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-06-18 14:47:33"}
+[2024-06-18 14:47:38,093][__main__][INFO] - data loaded
+[2024-06-18 14:47:38,111][root][INFO] - init model_type: Tensorflow
+[2024-06-18 14:47:38,127][uvicorn.error][INFO] - Started server process [3439114]
+[2024-06-18 14:47:38,127][uvicorn.error][INFO] - Waiting for application startup.
+[2024-06-18 14:47:38,127][uvicorn.error][INFO] - Application startup complete.
+[2024-06-18 14:47:38,128][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)

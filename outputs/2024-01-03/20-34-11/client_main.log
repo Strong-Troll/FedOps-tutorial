@@ -1,0 +1,44 @@
+[2024-01-03 20:34:11,774][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-01-03 20:34:11"}
+[2024-01-03 20:34:11,871][__main__][INFO] - data loaded
+[2024-01-03 20:34:11,901][__main__][INFO] - Latest Local Model download
+[2024-01-03 20:34:11,902][root][INFO] - downloaded local_model_name: MNISTClassifier_local_model_V1.pth
+[2024-01-03 20:34:11,914][root][INFO] - init model_type: Pytorch
+[2024-01-03 20:34:11,930][uvicorn.error][INFO] - Started server process [784465]
+[2024-01-03 20:34:11,931][uvicorn.error][INFO] - Waiting for application startup.
+[2024-01-03 20:34:11,931][uvicorn.error][INFO] - Application startup complete.
+[2024-01-03 20:34:11,931][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+[2024-01-03 20:35:26,054][root][INFO] - bulid model
+[2024-01-03 20:35:26,055][root][INFO] - FL start
+[2024-01-03 20:35:26,067][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40023
+[2024-01-03 20:35:26,068][root][INFO] - FL learning ready
+[2024-01-03 20:35:26,068][root][INFO] - fl_task_id: zzzzzz
+[2024-01-03 20:35:26,068][root][INFO] - dataset: MNIST
+[2024-01-03 20:35:26,069][root][INFO] - output_size: 10
+[2024-01-03 20:35:26,069][root][INFO] - validation_split: 0.2
+[2024-01-03 20:35:26,069][root][INFO] - model_type: Pytorch
+[2024-01-03 20:35:26,118][flwr][INFO] - Opened insecure gRPC connection (no certificates were passed)
+[2024-01-03 20:35:26,121][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-01-03 20:35:26,122][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-01-03 20:35:26,127][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-01-03 20:35:57,724][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 1, "gl_model_v": 2, "train_loss": 0.011227912729001664, "train_accuracy": 0.9959444444444444, "train_f1_score": 0.9959445049542458, "val_loss": 0.04234986915996179, "val_accuracy": 0.989, "val_f1_score": 0.9890043726953628, "train_time": 28.835510969161987, "wandb_name": ""}
+[2024-01-03 20:36:06,425][fedops.client.client_fl][INFO] - test - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 1, "test_loss": 0.05103793184698976, "test_accuracy": 0.98575, "gl_model_v": 2, "wandb_name": ""}
+[2024-01-03 20:36:31,793][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 2, "gl_model_v": 2, "train_loss": 0.009571926155144253, "train_accuracy": 0.9971944444444445, "train_f1_score": 0.9971943040370028, "val_loss": 0.051819262069407256, "val_accuracy": 0.9880833333333333, "val_f1_score": 0.9880878264044443, "train_time": 25.145116567611694, "wandb_name": ""}
+[2024-01-03 20:36:40,223][fedops.client.client_fl][INFO] - test - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 2, "test_loss": 0.058119583733756336, "test_accuracy": 0.98775, "gl_model_v": 2, "wandb_name": ""}
+[2024-01-03 20:37:06,207][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 3, "gl_model_v": 2, "train_loss": 0.002658527035493457, "train_accuracy": 0.9991944444444445, "train_f1_score": 0.9991943319744181, "val_loss": 0.04990239748943342, "val_accuracy": 0.9899166666666667, "val_f1_score": 0.9899180673796055, "train_time": 25.765366077423096, "wandb_name": ""}
+[2024-01-03 20:37:14,019][fedops.client.client_fl][INFO] - test - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 3, "test_loss": 0.05952258854975956, "test_accuracy": 0.9894166666666667, "gl_model_v": 2, "wandb_name": ""}
+[2024-01-03 20:37:39,568][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 4, "gl_model_v": 2, "train_loss": 0.0016657094289286483, "train_accuracy": 0.9994722222222222, "train_f1_score": 0.9994721825992489, "val_loss": 0.062385189916733697, "val_accuracy": 0.9900833333333333, "val_f1_score": 0.9900792591867368, "train_time": 25.359724044799805, "wandb_name": ""}
+[2024-01-03 20:37:47,843][fedops.client.client_fl][INFO] - test - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 4, "test_loss": 0.06327668790436292, "test_accuracy": 0.9906666666666667, "gl_model_v": 2, "wandb_name": ""}
+[2024-01-03 20:38:13,109][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 5, "gl_model_v": 2, "train_loss": 0.0029774731381400753, "train_accuracy": 0.9990833333333333, "train_f1_score": 0.9990833564005491, "val_loss": 0.05591559733372204, "val_accuracy": 0.9905833333333334, "val_f1_score": 0.9905856334716557, "train_time": 25.072710752487183, "wandb_name": ""}
+[2024-01-03 20:38:21,439][fedops.client.client_fl][INFO] - test - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "round": 5, "test_loss": 0.0630318881643292, "test_accuracy": 0.9883333333333333, "gl_model_v": 2, "wandb_name": ""}
+[2024-01-03 20:38:21,474][flwr][DEBUG] - gRPC channel closed
+[2024-01-03 20:38:21,474][flwr][INFO] - Disconnect and shut down
+[2024-01-03 20:38:21,476][root][INFO] - fl learning finished
+[2024-01-03 20:38:21,478][root][INFO] - client_operation_time - {"fl_task_id": "zzzzzz", "client_mac": "19:e7:c0:91:ab:e3", "client_name": "ccl-e-server", "operation_time": 175.40851402282715, "gl_model_v": 2}
+[2024-01-03 20:38:21,552][root][INFO] - try notify_fin
+[2024-01-03 20:38:21,581][root][INFO] - trainFin
+[2024-01-03 20:38:21,582][root][INFO] - FL Client Learning Finish
+[2024-01-03 21:57:58,745][uvicorn.error][INFO] - Shutting down
+[2024-01-03 21:57:58,846][uvicorn.error][INFO] - Waiting for application shutdown.
+[2024-01-03 21:57:58,847][uvicorn.error][INFO] - Application shutdown complete.
+[2024-01-03 21:57:58,847][uvicorn.error][INFO] - Finished server process [784465]
+[2024-01-03 21:57:58,873][root][INFO] - ccl-e-server;19:e7:c0:91:ab:e3-client close

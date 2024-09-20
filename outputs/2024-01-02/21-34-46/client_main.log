@@ -1,0 +1,12 @@
+[2024-01-02 21:34:46,731][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-01-02 21:34:46"}
+[2024-01-02 21:34:46,830][__main__][INFO] - data loaded
+[2024-01-02 21:34:46,859][root][INFO] - init model_type: Pytorch
+[2024-01-02 21:34:46,874][uvicorn.error][INFO] - Started server process [105496]
+[2024-01-02 21:34:46,874][uvicorn.error][INFO] - Waiting for application startup.
+[2024-01-02 21:34:46,874][uvicorn.error][INFO] - Application startup complete.
+[2024-01-02 21:34:46,875][uvicorn.error][INFO] - Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+[2024-01-03 00:01:00,688][uvicorn.error][INFO] - Shutting down
+[2024-01-03 00:01:00,789][uvicorn.error][INFO] - Waiting for application shutdown.
+[2024-01-03 00:01:00,789][uvicorn.error][INFO] - Application shutdown complete.
+[2024-01-03 00:01:00,789][uvicorn.error][INFO] - Finished server process [105496]
+[2024-01-03 00:01:00,830][root][INFO] - ccl-e-server;19:e7:c0:91:ab:e3-client close

@@ -1,0 +1,12 @@
+[2024-04-26 11:12:07,787][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-04-26 11:12:07"}
+[2024-04-26 11:12:10,749][root][ERROR] - No read global model
+[2024-04-26 11:12:10,749][root][INFO] - gl_model: None, gl_model_v: 0
+[2024-04-26 11:12:10,757][root][INFO] - last_gl_model_v: 0
+[2024-04-26 11:12:10,757][root][INFO] - init global model making
+[2024-04-26 11:12:10,775][flwr][INFO] - Starting Flower server, config: ServerConfig(num_rounds=3, round_timeout=None)
+[2024-04-26 11:12:10,821][flwr][INFO] - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+[2024-04-26 11:12:10,821][flwr][INFO] - Initializing global parameters
+[2024-04-26 11:12:10,822][flwr][INFO] - Using initial parameters provided by strategy
+[2024-04-26 11:12:10,822][flwr][INFO] - Evaluating initial parameters
+[2024-04-26 11:12:13,940][root][INFO] - server close
+[2024-04-26 11:12:13,954][root][INFO] - global model version upgrade
