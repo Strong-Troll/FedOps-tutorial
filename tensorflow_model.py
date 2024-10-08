@@ -8,7 +8,7 @@ import numpy as np
 
 # Define MNIST Model in TensorFlow
 class TFMNISTClassifier(tf.keras.Model):
-    def __init__(self, output_size = 10):
+    def __init__(self, output_size=10):
         super(TFMNISTClassifier, self).__init__()
         # Define the layers of the model
         self.conv1 = Conv2D(32, kernel_size=5, padding='same', activation='relu')
@@ -19,7 +19,13 @@ class TFMNISTClassifier(tf.keras.Model):
         self.dense1 = Dense(1000, activation='relu')
         self.outputs = Dense(output_size, activation='softmax')
 
+    def build(self, input_shape):
+        """ build() 메서드를 사용하여 모델의 가중치 초기화 """
+        # 부모 클래스의 build 메서드 호출
+        super(TFMNISTClassifier, self).build(input_shape)
+    
     def call(self, inputs):
+        """ Forward pass """
         x = self.conv1(inputs)
         x = self.pool1(x)
         x = self.conv2(x)
@@ -28,6 +34,7 @@ class TFMNISTClassifier(tf.keras.Model):
         x = self.dense1(x)
         x = self.outputs(x)
         return x
+
 
 # Training function
 def train_tf():
