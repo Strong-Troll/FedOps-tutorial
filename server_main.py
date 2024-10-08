@@ -54,7 +54,6 @@ def main(cfg: DictConfig) -> None:
     """
     # Instantiate the model as per configuration
     model = tensorflow_model.TFMNISTClassifier()
-    print("////////////////////////////////////////////////////////////////////////", model.get_weights())
     model_type = cfg.model_type  # Determine if the model is TensorFlow or Torch
 
     # Correct function based on model_type
@@ -75,8 +74,7 @@ def main(cfg: DictConfig) -> None:
         dataset=cfg.dataset.name,
         validation_split=cfg.dataset.validation_split,
         batch_size=cfg.batch_size)
-
-    print("////////////////////////////////////////////////////////////////////////", model.get_weights()) 
+    
     # Initialize FL server with the appropriate model and data
     fl_server = FLServer(cfg=cfg, model=model, model_name=model.__class__.__name__, model_type=model_type,
                          x_val=x_val, y_val=y_val)
