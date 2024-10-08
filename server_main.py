@@ -43,6 +43,7 @@ from fedops.server.app import FLServer
 import tensorflow_model
 import tensorflow_data_preparation
 from hydra.utils import instantiate
+import traceback
 
 
 @hydra.main(config_path="conf", config_name="config", version_base=None)
@@ -58,13 +59,16 @@ def main(cfg: DictConfig) -> None:
 
     # Correct function based on model_type
     if model_type == 'Tensorflow':
-        # test_function = tensorflow_model.test_tf  # Adjusted for TensorFlow testing function
-        # Compile the TensorFlow model
-        model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-        # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
-        model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
-        print("Model build Success!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!")
-        print("////////////////////////////////////////////////////////////////////////", model.get_weights()) 
+        try:
+            # test_function = tensorflow_model.test_tf  # Adjusted for TensorFlow testing function
+            # Compile the TensorFlow model
+            model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+            # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
+            model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
+            print("Model build Success!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!")
+            print("////////////////////////////////////////////////////////////////////////", model.get_weights()) 
+        except Exception as e:
+            print("model build error : ", traceback.format_exc())
 
     # Load validation data for evaluating the global model
     x_train, x_test, x_val, y_train, y_test, y_val = tensorflow_data_preparation.load_partition_tf(

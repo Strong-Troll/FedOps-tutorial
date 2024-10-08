@@ -3,3 +3,4 @@
 [2024-10-08 23:36:27,221][__main__][INFO] - Latest Local Model download
 [2024-10-08 23:36:27,221][root][INFO] - downloaded local_model_name: MNISTClassifier_local_model_V2.pth
 [2024-10-08 23:36:27,222][root][INFO] - init model_type: Tensorflow
+[2024-10-09 00:07:17,849][root][INFO] - ccl-e-server;1d:6f:c9:bd:26:d0-client close

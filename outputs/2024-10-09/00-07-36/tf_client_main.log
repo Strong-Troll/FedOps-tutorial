@@ -1,0 +1,34 @@
+[2024-10-09 00:07:36,186][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-10-09 00:07:36"}
+[2024-10-09 00:07:37,110][__main__][INFO] - data loaded
+[2024-10-09 00:07:37,126][__main__][INFO] - Latest Local Model download
+[2024-10-09 00:07:37,127][root][INFO] - downloaded local_model_name: MNISTClassifier_local_model_V2.pth
+[2024-10-09 00:07:37,128][root][INFO] - init model_type: Tensorflow
+[2024-10-09 00:10:31,545][root][INFO] - bulid model
+[2024-10-09 00:10:31,546][root][INFO] - FL start
+[2024-10-09 00:10:31,558][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40024
+[2024-10-09 00:10:31,560][root][INFO] - FL learning ready
+[2024-10-09 00:10:31,560][root][INFO] - fl_task_id: samd
+[2024-10-09 00:10:31,560][root][INFO] - dataset: mnist
+[2024-10-09 00:10:31,560][root][INFO] - output_size: 10
+[2024-10-09 00:10:31,560][root][INFO] - validation_split: 0.2
+[2024-10-09 00:10:31,560][root][INFO] - model_type: Tensorflow
+[2024-10-09 00:10:31,562][flwr][WARNING] - 
+        DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+        This is a deprecated feature. It will be removed
+        entirely in future versions of Flower.
+        
+[2024-10-09 00:10:31,614][flwr][INFO] - Opened insecure gRPC connection (no certificates were passed)
+[2024-10-09 00:10:31,616][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-10-09 00:10:31,617][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-10-09 00:10:31,622][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-10-09 00:10:32,372][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-10-09 00:10:32,576][flwr][DEBUG] - gRPC channel closed
+[2024-10-09 00:10:32,587][root][INFO] - notify_fail start
+[2024-10-09 00:10:32,614][root][ERROR] - trainFin
