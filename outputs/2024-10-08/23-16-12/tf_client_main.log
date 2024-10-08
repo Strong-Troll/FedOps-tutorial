@@ -1,0 +1,2 @@
+[2024-10-08 23:16:12,532][root][INFO] - FL_Task - {"dataset": "MNIST", "start_execution_time": "2024-10-08 23:16:12"}
+[2024-10-08 23:16:13,447][__main__][INFO] - data loaded
