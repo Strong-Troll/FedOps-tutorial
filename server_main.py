@@ -64,6 +64,7 @@ def main(cfg: DictConfig) -> None:
         # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
         model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
         print("Model build Success!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!")
+        print("////////////////////////////////////////////////////////////////////////", model.get_weights()) 
 
     # Load validation data for evaluating the global model
     x_train, x_test, x_val, y_train, y_test, y_val = tensorflow_data_preparation.load_partition_tf(
