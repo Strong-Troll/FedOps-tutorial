@@ -31,3 +31,4 @@
 [2024-10-09 00:26:44,176][flwr][DEBUG] - gRPC channel closed
 [2024-10-09 00:26:44,190][root][INFO] - notify_fail start
 [2024-10-09 00:26:44,214][root][ERROR] - trainFin
+[2024-10-09 00:37:19,967][root][INFO] - ccl-e-server;1d:6f:c9:bd:26:d0-client close

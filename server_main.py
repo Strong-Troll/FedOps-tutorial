@@ -65,7 +65,7 @@ def main(cfg: DictConfig) -> None:
             # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
             model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
             print("Model build Success!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!")
-            print("////////////////////////////////////////////////////////////////////////", model.get_weights()) 
+            print("////////////////////////////////////////////////////////////////////////", model, model.get_weights()) 
         except Exception as e:
             print("model build error : ", traceback.format_exc())
 
