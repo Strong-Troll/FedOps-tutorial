@@ -44,7 +44,7 @@ import tensorflow_model
 import tensorflow_data_preparation
 from hydra.utils import instantiate
 import traceback
-
+import tensorflow as tf
 
 @hydra.main(config_path="conf", config_name="config", version_base=None)
 def main(cfg: DictConfig) -> None:
@@ -64,6 +64,11 @@ def main(cfg: DictConfig) -> None:
             model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
             # No need to build explicitly if using `compile` and `fit` methods, but uncomment if necessary
             model.build((None, 28, 28, 1))  # Only if you're sure about the input shape
+
+            # 모델을 한 번 호출하여 레이어 초기화
+            dummy_input = tf.random.normal([1, 28, 28, 1])
+            model(dummy_input)
+
             print("Model build Success!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!~~~!!!")
             print("////////////////////////////////////////////////////////////////////////", model, model.get_weights()) 
         except Exception as e:
